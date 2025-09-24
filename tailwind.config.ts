@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -30,6 +31,14 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -46,6 +55,23 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          border: "hsl(var(--card-border))",
+        },
+        medical: {
+          DEFAULT: "hsl(var(--medical))",
+          light: "hsl(var(--medical-light))",
+        },
+        finance: {
+          DEFAULT: "hsl(var(--finance))",
+          light: "hsl(var(--finance-light))",
+        },
+        ai: {
+          DEFAULT: "hsl(var(--ai))",
+          light: "hsl(var(--ai-light))",
+        },
+        sales: {
+          DEFAULT: "hsl(var(--sales))",
+          light: "hsl(var(--sales-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

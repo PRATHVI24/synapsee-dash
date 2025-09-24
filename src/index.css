@@ -2,41 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Professional Dashboard Design System - AI/ML Unified App */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Base colors - Professional grays */
+    --background: 249 250 252;
+    --foreground: 226 228 237;
+    --sidebar-bg: 248 250 252;
+    
+    /* Card system */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 226 228 237;
+    --card-border: 226 232 240;
+    
+    /* Interactive elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 226 228 237;
+    
+    /* Brand colors - Professional blue primary */
+    --primary: 219 78% 32%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 219 78% 88%;
+    
+    /* Secondary system */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 226 228 237;
+    
+    /* Neutral tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 107 114 126;
+    
+    /* Accent system */
+    --accent: 220 14% 96%;
+    --accent-foreground: 226 228 237;
+    
+    /* Status colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Form elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 219 78% 32%;
+    
+    /* Project-specific colors */
+    --medical: 210 100% 60%;
+    --medical-light: 210 100% 95%;
+    --finance: 142 76% 36%;
+    --finance-light: 142 76% 95%;
+    --ai: 260 100% 60%;
+    --ai-light: 260 100% 95%;
+    --sales: 25 100% 50%;
+    --sales-light: 25 100% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(219 78% 32%), hsl(219 78% 45%));
+    --gradient-medical: linear-gradient(135deg, hsl(210 100% 60%), hsl(210 100% 75%));
+    --gradient-finance: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 50%));
+    --gradient-ai: linear-gradient(135deg, hsl(260 100% 60%), hsl(260 100% 75%));
+    --gradient-sales: linear-gradient(135deg, hsl(25 100% 50%), hsl(25 100% 65%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 20px hsl(219 78% 32% / 0.15);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +93,82 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode - Professional dark theme */
+    --background: 15 23 42;
+    --foreground: 248 250 252;
+    --sidebar-bg: 15 23 42;
+    
+    /* Card system */
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
+    --card-border: 51 65 85;
+    
+    /* Interactive elements */
+    --popover: 30 41 59;
+    --popover-foreground: 248 250 252;
+    
+    /* Brand colors */
+    --primary: 219 78% 65%;
+    --primary-foreground: 15 23 42;
+    --primary-light: 219 78% 25%;
+    
+    /* Secondary system */
+    --secondary: 51 65 85;
+    --secondary-foreground: 248 250 252;
+    
+    /* Neutral tones */
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
+    
+    /* Accent system */
+    --accent: 51 65 85;
+    --accent-foreground: 248 250 252;
+    
+    /* Status colors - adjusted for dark mode */
+    --destructive: 0 72% 61%;
+    --destructive-foreground: 248 250 252;
+    --success: 142 76% 46%;
+    --success-foreground: 248 250 252;
+    --warning: 45 93% 57%;
+    --warning-foreground: 15 23 42;
+    
+    /* Form elements */
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 219 78% 65%;
+    
+    /* Project-specific colors - dark mode */
+    --medical: 210 100% 70%;
+    --medical-light: 210 100% 15%;
+    --finance: 142 76% 46%;
+    --finance-light: 142 76% 15%;
+    --ai: 260 100% 70%;
+    --ai-light: 260 100% 15%;
+    --sales: 25 100% 60%;
+    --sales-light: 25 100% 15%;
+    
+    /* Gradients - dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(219 78% 55%), hsl(219 78% 70%));
+    --gradient-medical: linear-gradient(135deg, hsl(210 100% 60%), hsl(210 100% 75%));
+    --gradient-finance: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 50%));
+    --gradient-ai: linear-gradient(135deg, hsl(260 100% 60%), hsl(260 100% 75%));
+    --gradient-sales: linear-gradient(135deg, hsl(25 100% 50%), hsl(25 100% 65%));
+    
+    /* Shadows - enhanced for dark mode */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.25);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.35);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.45);
+    --shadow-glow: 0 0 20px hsl(219 78% 65% / 0.25);
+    
+    /* Sidebar dark mode */
+    --sidebar-background: 15 23 42;
+    --sidebar-foreground: 248 250 252;
+    --sidebar-primary: 219 78% 65%;
+    --sidebar-primary-foreground: 15 23 42;
+    --sidebar-accent: 51 65 85;
+    --sidebar-accent-foreground: 248 250 252;
+    --sidebar-border: 51 65 85;
+    --sidebar-ring: 219 78% 65%;
   }
 }
 
@@ -100,6 +178,46 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Project-specific utility classes */
+  .project-medical {
+    @apply border-l-4 border-l-[hsl(var(--medical))];
+  }
+  
+  .project-finance {
+    @apply border-l-4 border-l-[hsl(var(--finance))];
+  }
+  
+  .project-ai {
+    @apply border-l-4 border-l-[hsl(var(--ai))];
+  }
+  
+  .project-sales {
+    @apply border-l-4 border-l-[hsl(var(--sales))];
+  }
+  
+  /* Dashboard card styles */
+  .dashboard-card {
+    @apply bg-card border border-[hsl(var(--card-border))] rounded-lg p-6 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)] transition-shadow duration-200;
+  }
+  
+  .gradient-medical {
+    background: var(--gradient-medical);
+  }
+  
+  .gradient-finance {
+    background: var(--gradient-finance);
+  }
+  
+  .gradient-ai {
+    background: var(--gradient-ai);
+  }
+  
+  .gradient-sales {
+    background: var(--gradient-sales);
   }
 }
